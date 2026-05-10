@@ -71,7 +71,7 @@ npm run dev                                   # http://localhost:5173
 ## Status
 
 - **Backend**: feature-complete, 84 tests green, Alembic head `0002`. Implements the orchestration pipeline (flow.txt steps 7–11 and 14), JWT auth + RBAC + asset scope + Separation of Duties, /users CRUD + asset-scope management, externalized AWX template IDs, full audit trail, and a `GET /api/v1/dashboard/summary` aggregate.
-- **Frontend**: every page from `docs/FRONTEND_SPECIFICATION.md` §8 is real and wired to the backend. Build plan is at [`docs/FRONTEND_BUILD_PLAN.md`](./docs/FRONTEND_BUILD_PLAN.md) — Phases 0–6 marked done; Phase 7 (tests) and Phase 8 (Dockerfile + nginx + CI) are deferred work.
+- **Frontend**: every page from `docs/FRONTEND_SPECIFICATION.md` §8 is real and wired to the backend. 
 
 ## Hard rules
 
