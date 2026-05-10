@@ -1,0 +1,41 @@
+1. Wazuh agents are installed on Debian/Windows machines.
+
+2. Agents collect machine information:
+   - OS
+   - packages
+   - versions
+   - services
+   - hotfixes
+   - logs
+
+3. Agents send this information to the Wazuh Manager.
+
+4. Wazuh Manager / Indexer stores and analyzes the data.
+
+5. Wazuh vulnerability detector compares the inventory with CVE feeds/databases.
+
+6. Wazuh API exposes the results:
+   - agents
+   - inventory
+   - vulnerabilities
+   - alerts
+
+7. Your backend calls Wazuh API.
+
+8. Your backend normalizes the data and stores it in PostgreSQL:
+   - assets
+   - vulnerabilities
+   - packages
+   - status
+
+9. When remediation is requested, backend builds a JSON payload, not really a “file”.
+
+10. Backend sends that JSON payload to AWX API as extra_vars.
+
+11. AWX launches the approved job template/playbook.
+
+12. AWX connects to the target machine using SSH/WinRM.
+
+13. Playbook applies the correction.
+
+14. Backend later asks Wazuh again to verify if the vulnerability disappeared.

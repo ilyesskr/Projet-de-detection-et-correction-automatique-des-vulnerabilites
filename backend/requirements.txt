@@ -1,0 +1,28 @@
+# Web framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9         # OAuth2 form parsing on /token endpoints
+
+# Validation & settings
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+email-validator>=2.1.0          # enables pydantic.EmailStr
+
+# Database (PostgreSQL via SQLAlchemy 2.0)
+sqlalchemy>=2.0.27
+alembic>=1.13.0
+psycopg[binary]>=3.1.18
+
+# Cache / token store / future queue backend
+redis>=5.0.0
+
+# Authentication & password security
+pyjwt>=2.8.0                    # issue & verify JWTs for user sessions
+bcrypt>=4.1.0                   # password hashing for user accounts
+
+# HTTP client for Wazuh / AWX
+httpx>=0.27.0
+
+# Testing
+pytest>=8.1.0
+pytest-asyncio>=0.23.0

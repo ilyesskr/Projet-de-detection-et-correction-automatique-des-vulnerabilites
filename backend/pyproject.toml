@@ -1,0 +1,9 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# ``auto`` lets us write ``async def test_x():`` without decorating each one.
+asyncio_mode = "auto"
+filterwarnings = [
+    # httpx complains about verify=False for self-signed Wazuh certs in dev;
+    # we don't want every test run cluttered with those warnings.
+    "ignore::DeprecationWarning",
+]
