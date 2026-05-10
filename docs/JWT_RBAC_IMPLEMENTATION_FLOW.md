@@ -123,10 +123,7 @@ Authorization: Bearer <access_token>
 
 The backend verifies the token and identifies the current user.
 
-## 3. Database Models To Add
-
-Add the following tables:
-
+## 3. Database Models 
 ```text
 users
 roles
@@ -138,7 +135,7 @@ user_asset_scopes
 
 ### users
 
-Suggested fields:
+fields:
 
 ```text
 id
@@ -159,7 +156,7 @@ Stores platform users and their password hashes.
 
 ### roles
 
-Suggested fields:
+fields:
 
 ```text
 id
@@ -177,7 +174,7 @@ Stores named responsibilities such as admin, viewer, or remediation_operator.
 
 ### permissions
 
-Suggested fields:
+fields:
 
 ```text
 id
@@ -194,8 +191,7 @@ Stores precise actions such as remediation:approve or assets:read.
 ```
 
 ### user_roles
-
-Suggested fields:
+fields:
 
 ```text
 user_id
@@ -209,8 +205,7 @@ Assigns roles to users.
 ```
 
 ### role_permissions
-
-Suggested fields:
+fields:
 
 ```text
 role_id
@@ -225,7 +220,7 @@ Assigns permissions to roles.
 
 ### user_asset_scopes
 
-Suggested fields:
+fields:
 
 ```text
 user_id
