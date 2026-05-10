@@ -319,14 +319,14 @@ JWT_EXPIRE_MINUTES=60
 
 Add schemas for authentication and user management.
 
-Suggested files:
+files:
 
 ```text
 app/schemas/auth.py
 app/schemas/user.py
 ```
 
-Suggested schemas:
+schemas:
 
 ```text
 LoginRequest
@@ -384,7 +384,7 @@ require_role(role_name)
 require_asset_access(asset_id)
 ```
 
-Suggested file:
+file:
 
 ```text
 app/api/dependencies.py
@@ -444,9 +444,7 @@ Frontend sends JWT in Authorization header
 
 ## 11. Route Protection Plan
 
-Replace the temporary API-key protection with JWT/RBAC.
-
-Suggested permissions per route:
+permissions per route:
 
 ```text
 GET  /assets                         -> assets:read
@@ -515,8 +513,6 @@ This protects the approval workflow and makes the platform more suitable for ent
 
 Before users can log in, the platform needs a first admin account.
 
-Recommended development approach:
-
 ```text
 scripts/create_admin.py
 ```
@@ -532,7 +528,7 @@ Create first admin user
 Assign admin role to first admin user
 ```
 
-Suggested environment variables:
+environment variables:
 
 ```env
 FIRST_ADMIN_USERNAME=admin
@@ -573,55 +569,8 @@ success
 context
 ```
 
-## 16. Tests To Add
 
-Add tests for:
-
-```text
-Password hashing works
-Password verification succeeds with correct password
-Password verification fails with wrong password
-Login succeeds with valid credentials
-Login fails with invalid credentials
-JWT token can be decoded
-Missing token returns 401
-Invalid token returns 401
-User without permission gets 403
-User with permission gets access
-Inactive user cannot log in
-User cannot approve own remediation job
-Admin bypasses asset scope
-Non-admin cannot access assets outside scope
-```
-
-## 17. Implementation Order
-
-Follow this exact order:
-
-```text
-1. Add root .gitignore and protect .env, .venv, __pycache__, .pytest_cache.
-2. Fix .env.example values that are outdated.
-3. Add auth/RBAC models.
-4. Generate and review Alembic migration.
-5. Apply migration with alembic upgrade head.
-6. Add password hashing utilities.
-7. Add JWT creation and decoding utilities.
-8. Add auth/user/role/permission schemas.
-9. Add auth service.
-10. Add current-user and permission dependencies.
-11. Add /auth/login and /auth/me routes.
-12. Add bootstrap admin script.
-13. Protect existing routes with permissions.
-14. Refactor remediation created_by and approved_by to come from current user.
-15. Enforce Separation of Duties on approval.
-16. Add audit entries for auth and remediation actions.
-17. Add tests for auth, RBAC, asset scope, and SoD.
-18. Run pytest.
-19. Run alembic current.
-20. Start backend and manually test login + protected routes.
-```
-
-## 18. Acceptance Criteria
+## 16. Acceptance Criteria
 
 The JWT + RBAC subsystem is complete when:
 
