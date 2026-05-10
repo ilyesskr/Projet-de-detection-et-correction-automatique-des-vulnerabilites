@@ -506,7 +506,7 @@ environment variables:
 ```env
 FIRST_ADMIN_USERNAME=admin
 FIRST_ADMIN_EMAIL=admin@example.com
-FIRST_ADMIN_PASSWORD=change-me
+FIRST_ADMIN_PASSWORD=Admon@2026!
 ```
 
 The script should be safe to run multiple times.
