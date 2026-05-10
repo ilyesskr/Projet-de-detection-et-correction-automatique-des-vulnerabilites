@@ -164,6 +164,5 @@ pending_approval → approved → running → verification_pending → verified_
 ## Where to find more
 
 - `../docs/FRONTEND_SPECIFICATION.md` — what this app is supposed to be. Read the §0 amendments.
-- `../docs/FRONTEND_BUILD_PLAN.md` — the 8-phase build plan; each phase has a ✅ marker.
 - `../backend/README.md` — backend setup, RBAC model, env vars.
 - `../flow.txt` — the 14-step pipeline reference.
