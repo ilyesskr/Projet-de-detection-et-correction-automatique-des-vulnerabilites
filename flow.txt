@@ -20,9 +20,9 @@
    - vulnerabilities
    - alerts
 
-7. Your backend calls Wazuh API.
+7. The backend calls Wazuh API.
 
-8. Your backend normalizes the data and stores it in PostgreSQL:
+8. The backend backend normalizes the data and stores it in PostgreSQL:
    - assets
    - vulnerabilities
    - packages
