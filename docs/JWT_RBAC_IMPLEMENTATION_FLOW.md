@@ -233,36 +233,9 @@ Purpose:
 Restricts a user to specific assets.
 ```
 
-## 4. Alembic Migration
 
-After adding the models, generate a migration:
 
-```bash
-cd /home/ilyass/Desktop/PA_DETECTION_CORRECTION/backend
-.venv/bin/alembic revision --autogenerate -m "add auth rbac"
-```
-
-Review the generated migration carefully.
-
-Then apply it:
-
-```bash
-.venv/bin/alembic upgrade head
-```
-
-Verify:
-
-```bash
-.venv/bin/alembic current
-```
-
-Expected:
-
-```text
-latest revision is applied
-```
-
-## 5. Password Hashing
+## 4. Password Hashing
 
 Passwords must never be stored in plain text.
 
