@@ -63,8 +63,6 @@ npm run gen:types                             # one-shot OpenAPI → TS codegen
 npm run dev                                   # http://localhost:5173
 ```
 
-Sign in with the admin you created in step 2. The Swagger UI is at <http://localhost:8000/docs> if you want to poke the API directly.
-
 ## Component READMEs
 
 - [`backend/README.md`](./backend/README.md) — FastAPI setup, RBAC model, env vars, migrations, tests, health probes.
@@ -84,6 +82,3 @@ These are repeated from the security report and the spec. They constrain every c
 - Every state-changing remediation transition writes an audit row. The actor is the JWT username; the frontend cannot spoof `created_by` / `approved_by`.
 - Wazuh, not AWX, decides whether a CVE is fixed. AWX returning "successful" only flips the job to `verification_pending`; `verified_fixed` requires the CVE to be absent on Wazuh's next read.
 
-## License
-
-Internal project — not currently published under an open-source license.
