@@ -8,7 +8,7 @@ Operator console for the **vulnerability detect → correct → verify** pipelin
 └──────────────────────┘   └────────────────────────┘
 ```
 
-For the full pipeline narrative see `../flow.txt`. For the spec this implements see `../docs/FRONTEND_SPECIFICATION.md` (read its §0 amendments first) and the build plan in `../docs/FRONTEND_BUILD_PLAN.md`.
+For the full pipeline narrative see `../flow.txt`. For the spec this implements see `../docs/FRONTEND_SPECIFICATION.md` (read its §0 amendments first).
 
 ## Quick start
 
